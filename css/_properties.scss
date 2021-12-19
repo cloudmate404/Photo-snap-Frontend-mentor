@@ -1,0 +1,74 @@
+
+
+
+:root{
+
+    //Colors
+    --pureBlack : #000;
+    --lightGrey: #dfdfdf;
+    --pureWhite: #fff;
+    
+    
+    //Typography
+    --H1: 40px;
+    --H2: 24px;
+    --H3: 18px;
+    --H4: 12px;
+    --p: 15px
+
+}
+
+
+
+
+//Buttons
+
+@mixin textBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin textBoxDark {
+    @include textBox;
+    background-color: var(--pureBlack);
+    color: var(--pureWhite);
+        h1{
+            font-size: var(--H1);
+            line-height: 48px;
+        }
+        p{
+            font-size: 15px;
+            line-height: 25px;
+            opacity: 0.6;
+        }
+}
+
+@mixin textBoxLight {
+    @include textBox;
+    background-color: var(--pureWhite);
+    color: var(--pureBlack);
+        h1{
+            font-size: var(--H1);
+            line-height: 48px;
+        }
+        p{
+            font-size: 15px;
+            line-height: 25px;
+            opacity: 0.6;
+        }
+}
+
+
+@mixin buttonDark{
+    background-color: var(--pureBlack);
+    color: var(--pureWhite);
+    font-size: var(--H4);
+
+}
+
+@mixin buttonDarkHover {
+    background-color: var(--lightGrey);
+    color: var(--pureBlack);
+    
+}

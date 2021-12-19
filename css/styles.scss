@@ -1,0 +1,19 @@
+@import './properties';
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+button{
+    @include buttonDark;
+
+    &:hover{
+        @include buttonDarkHover;
+    }
+}
