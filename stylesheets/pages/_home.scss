@@ -1,3 +1,102 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+.sectionOne{
+    @include sectionEach($height75: true);
+    .imgOne{
+        width: 55%;
+        max-width: 55%;
+        // max-height: 75vh;
+    }
+
+    .heroText{
+        @include textBox ($light: false)
+    }
+}
+
+.sectionTwo, .sectionThree{
+    @include sectionEach($height75: false);
+
+    .imgHm{
+        width: 55%;
+        max-width: 55%;
+        min-width: 55%;
+    }
+
+    .textBox{
+        @include textBox ($light: true);
+    }
+}
+
+.imgCards{
+    display: flex;
+    
+    .link{
+        margin-top: 1.5em;
+        justify-content: space-between;
+        align-items: center;
+
+        a{
+            color: $pureWhite;
+        }
+    }
+
+
+    .imgCard1{
+        background: $imgDarkener, url('/assets/stories/desktop/mountains.jpg');
+    }
+    .imgCard2{
+        background: $imgDarkener, url('/assets/stories/desktop/cityscapes.jpg');
+    }
+    .imgCard3{
+        background: $imgDarkener, url('/assets/stories/desktop/18-days-voyage.jpg');
+    }.imgCard4{
+        background: $imgDarkener, url('/assets/stories/desktop/architecturals.jpg');
+    }
+
+    .imgCard{
+        display: flex;
+        flex-direction: column;
+        gap: 0.25em;
+        justify-content: flex-end;
+        width: 25%;
+        height: $section70;
+        background-position: center;
+        background-size:cover ;
+        background-repeat: no-repeat;
+        color: $pureWhite;
+        padding: 2em 2em;
+        background-image: 100%;
+    }
+    hr{
+        border-top: 1px solid var(--pureWhite);
+    }
+}
+
+.sectionFive{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.875rem;
+    padding: 10rem;
+    align-self: flex-end;
+    justify-content: end;
+
+    .responsive, .noLimit, .embed{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .feature{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2em;
+        padding: 0 2em;
+        text-align: center;
+        
+    }
+}
+

@@ -1,34 +1,108 @@
-// -----------------------------------------------------------------------------
-// This file contains all application-wide Sass mixins.
-// -----------------------------------------------------------------------------
+// // -----------------------------------------------------------------------------
+// // This file contains all application-wide Sass mixins.
+// // -----------------------------------------------------------------------------
 
-/// Event wrapper
-/// @author Harry Roberts
-/// @param {Bool} $self [false] - Whether or not to include current selector
-/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
-@mixin on-event($self: false) {
-  @if $self {
-    &,
-    &:hover,
-    &:active,
-    &:focus {
-      @content;
-    }
-  } @else {
-    &:hover,
-    &:active,
-    &:focus {
-      @content;
-    }
+// /// Event wrapper
+// /// @author Harry Roberts
+// /// @param {Bool} $self [false] - Whether or not to include current selector
+// /// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+// @mixin on-event($self: false) {
+//   @if $self {
+//     &,
+//     &:hover,
+//     &:active,
+//     &:focus {
+//       @content;
+//     }
+//   } @else {
+//     &:hover,
+//     &:active,
+//     &:focus {
+//       @content;
+//     }
+//   }
+// }
+
+// /// Make a context based selector a little more friendly
+// /// @author Kitty Giraudel
+// /// @param {String} $context
+// @mixin when-inside($context) {
+//   #{$context} & {
+//     @content;
+//   }
+// }
+
+
+@mixin textBox ($light: false){
+  width: 45%;
+  min-width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  margin: 0 auto;
+  justify-content: center;
+  height: 100%;
+  h1,
+  p,
+  .link{
+    width: 65%;
+    min-width: 300px;
+    margin: 0 auto;
   }
+  .link{
+    gap: 2rem;
+  }
+  h1{
+    font-size: $H1;
+    // line-height: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4.2px;
+  }
+  p{
+    line-height: 25px;
+    font-size: $p;
+  }
+  a{
+    color: var(--pureWhite);
+    text-transform: uppercase;
+    text-decoration: none;
+
+  }
+  
+  @if $light{
+        background-color: $pureWhite;
+        h1{
+            color: $pureBlack;
+        }
+        p{
+            color: $pureBlack;
+        }
+        a{
+            color: $pureBlack;
+        }
+  }
+  @else {
+    background-color: $pureBlack;
+    h1{
+        color: $pureWhite;
+    }
+    p{
+        color: $pureWhite;
+    }
+    a{
+        color: $pureWhite;
+    }
+}
 }
 
-/// Make a context based selector a little more friendly
-/// @author Kitty Giraudel
-/// @param {String} $context
-@mixin when-inside($context) {
-  #{$context} & {
-    @content;
+@mixin sectionEach ($height75: false){
+  display: flex;
+  width: 100%;
+
+  @if $height75{
+    height: $section75;
+  } @else{
+    height: $section70;
   }
 }
-

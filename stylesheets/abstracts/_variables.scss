@@ -1,71 +1,93 @@
-// -----------------------------------------------------------------------------
-// This file contains all application-wide Sass variables.
-// -----------------------------------------------------------------------------
+// // -----------------------------------------------------------------------------
+// // This file contains all application-wide Sass variables.
+// // -----------------------------------------------------------------------------
 
 
 
 
 
-/// Regular font family
-/// @type List
-$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+// /// Regular font family
+// /// @type List
+// $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 
-/// Code (monospace) font family
-/// @type List
-$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
-
-
-
-
-
-/// Copy text color
-/// @type Color
-$text-color: rgb(34, 34, 34) !default;
-
-/// Main brand color
-/// @type Color
-$brand-color: rgb(229, 0, 80) !default;
-
-/// Light grey
-/// @type Color
-$light-grey: rgb(237, 237, 237) !default;
-
-/// Medium grey
-/// @type Color
-$mid-grey: rgb(153, 153, 153) !default;
-
-/// Dark grey
-/// @type Color
-$dark-grey: rgb(68, 68, 68) !default;
+// /// Code (monospace) font family
+// /// @type List
+// $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
 
 
 
 
 
-/// Container's maximum width
-/// @type Length
-$max-width: 1180px !default;
+// /// Copy text color
+// /// @type Color
+// $text-color: rgb(34, 34, 34) !default;
+
+// /// Main brand color
+// /// @type Color
+// $brand-color: rgb(229, 0, 80) !default;
+
+// /// Light grey
+// /// @type Color
+// $light-grey: rgb(237, 237, 237) !default;
+
+// /// Medium grey
+// /// @type Color
+// $mid-grey: rgb(153, 153, 153) !default;
+
+// /// Dark grey
+// /// @type Color
+// $dark-grey: rgb(68, 68, 68) !default;
 
 
 
 
 
-/// Breakpoints map
-/// @prop {String} keys - Keys are identifiers mapped to a given length
-/// @prop {Map} values - Values are actual breakpoints expressed in pixels
-$breakpoints: (
-  'small': 320px,
-  'medium': 768px,
-  'large': 1024px,
-) !default;
+// /// Container's maximum width
+// /// @type Length
+// $max-width: 1180px !default;
+
+
+
+
+
+// /// Breakpoints map
+// /// @prop {String} keys - Keys are identifiers mapped to a given length
+// /// @prop {Map} values - Values are actual breakpoints expressed in pixels
+// $breakpoints: (
+//   'small': 320px,
+//   'medium': 768px,
+//   'large': 1024px,
+// ) !default;
 
 
 
 
 
 
-/// Relative or absolute URL where all assets are served from
-/// @type String
-/// @example scss - When using a CDN
-///   $base-url: 'http://cdn.example.com/assets/';
-$base-url: '/assets/' !default;
+// /// Relative or absolute URL where all assets are served from
+// /// @type String
+// /// @example scss - When using a CDN
+// ///   $base-url: 'http://cdn.example.com/assets/';
+// $base-url: '/assets/' !default;
+
+
+//Colors
+  $mainAccent: linear-gradient(360deg,#FFC593, #BC7198, #5A77FF);
+  $pureBlack : #000;
+  $lightGrey: #dfdfdf;
+  $pureWhite: #fff;
+
+//Typography
+  $H1: 40px;
+  $H2: 24px;
+  $H3: 18px;
+  $H4: 12px;
+  $p: 15px;
+  $a: 12px;
+
+  //SectionHeight
+  $section75: 80vh;
+  $section70: 75vh;
+
+  //image darkener
+  $imgDarkener: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
