@@ -33,6 +33,7 @@
 // }
 
 
+
 @mixin textBox ($light: false){
   width: 45%;
   min-width: 45%;
@@ -105,4 +106,65 @@
   } @else{
     height: $section70;
   }
+}
+
+@mixin heroSpec($light:false) {
+  display: flex;
+  flex-direction: column;
+  
+  
+  
+  
+  h1,
+  p,
+  .link{
+    
+    min-width: 300px;
+    
+  }
+  .link{
+    gap: 2rem;
+  }
+  h1{
+    font-size: $H1;
+    // line-height: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4.2px;
+  }
+  p{
+    line-height: 25px;
+    font-size: $p;
+  }
+  a{
+    color: var(--pureWhite);
+    text-transform: uppercase;
+    text-decoration: none;
+
+  }
+  
+  @if $light{
+        background-color: $pureWhite;
+        h1{
+            color: $pureBlack;
+        }
+        p{
+            color: $pureBlack;
+        }
+        a{
+            color: $pureBlack;
+        }
+  }
+  @else {
+    background-color: $pureBlack;
+    h1{
+        color: $pureWhite;
+    }
+    p{
+        color: $pureWhite;
+    }
+    a{
+        color: $pureWhite;
+    }
+}
 }

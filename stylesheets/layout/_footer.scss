@@ -4,23 +4,32 @@
 footer{
     background-color: $pureBlack;
 
-    // .socialLinks{
-    //     display: flex;
+    .socialLinks{
+        display: flex;
 
-    //     .facebook{
+        // .facebook{
+        //     color: purple;
+        //     &:hover{
+        //         color: #63AFDB;
+        //     }
+        // }
+        
+       
+        
+        // .facebook{
             
-    //         .facebookBW{
-    //             display: block;
-    //             &:hover{
-    //                 display: none;
-    //             }
-    //         }
-    //         .facebookCO{
-    //             display: none;
-    //             &:hover{
-    //                 display: block;
-    //             }
-    //         }
-    //     }
-    // }
+        //     .facebookBW{
+        //         display: block;
+        //         &:hover{
+        //             display: none;
+        //         }
+        //     }
+        //     .facebookCO{
+        //         display: none;
+        //         &:hover{
+        //             display: block;
+        //         }
+        //     }
+        // }
+    }
 }

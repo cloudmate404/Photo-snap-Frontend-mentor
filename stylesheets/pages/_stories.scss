@@ -1,0 +1,95 @@
+.heroStories{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-image: $imgDarkener,url('/assets/stories/desktop/moon-of-appalacia.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 6rem 7rem;
+    height: $section75;
+    
+
+    
+
+    .storiesHeroText{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+       
+
+
+        .featured,.storyTitle{
+            text-transform: uppercase;
+            color: $pureWhite;
+            font-weight: 700;
+
+        }
+        .featured{
+            font-size: $a;
+            letter-spacing: 2px;
+        }
+        .storyTitle{
+            font-size: $H1;
+            letter-spacing: 4.2px;
+        }
+        p{
+            color: rgba($color: $pureWhite, $alpha: .6);
+            font-size: 13px;
+            line-height: 25px;
+            
+            span{
+                color: rgba($color: $pureWhite, $alpha: 1);
+            }
+        }
+    }
+    
+}
+
+
+.imgCards{
+    display: flex;
+    flex-wrap: wrap;
+
+    .imgCard5{
+        background: $imgDarkener, url('/assets/stories/desktop/world-tour.jpg') ;
+    }
+    .imgCard6{
+        background: $imgDarkener, url('/assets/stories/desktop/unforeseen-corners.jpg') ;
+    }
+    .imgCard7{
+        background: $imgDarkener, url('/assets/stories/desktop/king-on-africa.jpg') ;
+    }
+    .imgCard8{
+        background: $imgDarkener, url('/assets/stories/desktop/trip-to-nowhere.jpg') ;
+    }
+    .imgCard9{
+        background: $imgDarkener, url('/assets/stories/desktop/rage-of-the-sea.jpg') ;
+    }
+    .imgCard10{
+        background: $imgDarkener, url('/assets/stories/desktop/running-free.jpg') ;
+    }
+    .imgCard11{
+        background: $imgDarkener, url('/assets/stories/desktop/behind-the-waves.jpg') ;
+    }
+    .imgCard12{
+        background: $imgDarkener, url('/assets/stories/desktop/calm-waters.jpg') ;
+    }
+    .imgCard13{
+        background: $imgDarkener, url('/assets/stories/desktop/milky-way.jpg') ;
+    }
+    .imgCard14{
+        background: $imgDarkener, url('/assets/stories/desktop/dark-forest.jpg') ;
+    }
+    .imgCard15{
+        background: $imgDarkener, url('/assets/stories/desktop/somwarpet.jpg') ;
+    }
+    .imgCard16{
+        background: $imgDarkener, url('/assets/stories/desktop/land-of-dreams.jpg') ;
+    }
+
+    .imgCard{
+        background-position: center;
+        background-size:cover ;
+        background-repeat: no-repeat;
+    }
+}

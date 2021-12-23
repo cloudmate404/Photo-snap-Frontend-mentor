@@ -72,6 +72,12 @@ footer {
   background-color: #000;
 }
 
+footer .socialLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .imgCards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -284,7 +290,7 @@ footer {
       -ms-flex-pack: end;
           justify-content: flex-end;
   width: 25%;
-  height: 75vh;
+  height: 70vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -341,5 +347,130 @@ footer {
   gap: 2em;
   padding: 0 2em;
   text-align: center;
+}
+
+.heroStories {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.5))), url("/assets/stories/desktop/moon-of-appalacia.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("/assets/stories/desktop/moon-of-appalacia.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 6rem 7rem;
+  height: 80vh;
+}
+
+.heroStories .storiesHeroText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.heroStories .storiesHeroText .featured, .heroStories .storiesHeroText .storyTitle {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+}
+
+.heroStories .storiesHeroText .featured {
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.heroStories .storiesHeroText .storyTitle {
+  font-size: 40px;
+  letter-spacing: 4.2px;
+}
+
+.heroStories .storiesHeroText p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+  line-height: 25px;
+}
+
+.heroStories .storiesHeroText p span {
+  color: white;
+}
+
+.imgCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.imgCards .imgCard5 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.5))), url("/assets/stories/desktop/world-tour.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("/assets/stories/desktop/world-tour.jpg");
+}
+
+.imgCards .imgCard6 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.5))), url("/assets/stories/desktop/unforeseen-corners.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("/assets/stories/desktop/unforeseen-corners.jpg");
+}
+
+.imgCards .imgCard7 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.5))), url("/assets/stories/desktop/king-on-africa.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("/assets/stories/desktop/king-on-africa.jpg");
+}
+
+.imgCards .imgCard8 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.5))), url("/assets/stories/desktop/trip-to-nowhere.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("/assets/stories/desktop/trip-to-nowhere.jpg");
+}
+
+.imgCards .imgCard9 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.5))), url("/assets/stories/desktop/rage-of-the-sea.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("/assets/stories/desktop/rage-of-the-sea.jpg");
+}
+
+.imgCards .imgCard10 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.5))), url("/assets/stories/desktop/running-free.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("/assets/stories/desktop/running-free.jpg");
+}
+
+.imgCards .imgCard11 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.5))), url("/assets/stories/desktop/behind-the-waves.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("/assets/stories/desktop/behind-the-waves.jpg");
+}
+
+.imgCards .imgCard12 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.5))), url("/assets/stories/desktop/calm-waters.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("/assets/stories/desktop/calm-waters.jpg");
+}
+
+.imgCards .imgCard13 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.5))), url("/assets/stories/desktop/milky-way.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("/assets/stories/desktop/milky-way.jpg");
+}
+
+.imgCards .imgCard14 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.5))), url("/assets/stories/desktop/dark-forest.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("/assets/stories/desktop/dark-forest.jpg");
+}
+
+.imgCards .imgCard15 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.5))), url("/assets/stories/desktop/somwarpet.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("/assets/stories/desktop/somwarpet.jpg");
+}
+
+.imgCards .imgCard16 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.5))), url("/assets/stories/desktop/land-of-dreams.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("/assets/stories/desktop/land-of-dreams.jpg");
+}
+
+.imgCards .imgCard {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 /*# sourceMappingURL=main.css.map */
