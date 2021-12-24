@@ -110,7 +110,10 @@ footer .socialLinks {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1.75rem;
-  margin: 0 auto;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 7rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -121,9 +124,8 @@ footer .socialLinks {
 .sectionOne .heroText h1,
 .sectionOne .heroText p,
 .sectionOne .heroText .link {
-  width: 65%;
+  width: 100%;
   min-width: 300px;
-  margin: 0 auto;
 }
 
 .sectionOne .heroText .link {
@@ -185,7 +187,10 @@ footer .socialLinks {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1.75rem;
-  margin: 0 auto;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 7rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -198,9 +203,8 @@ footer .socialLinks {
 .sectionTwo .textBox .link, .sectionThree .textBox h1,
 .sectionThree .textBox p,
 .sectionThree .textBox .link {
-  width: 65%;
+  width: 100%;
   min-width: 300px;
-  margin: 0 auto;
 }
 
 .sectionTwo .textBox .link, .sectionThree .textBox .link {
@@ -291,19 +295,19 @@ footer .socialLinks {
           justify-content: flex-end;
   width: 25%;
   height: 70vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   color: #fff;
   padding: 2em 2em;
   background-image: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .imgCards hr {
   border-top: 1px solid var(--pureWhite);
 }
 
-.sectionFive {
+.featuresSection {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -318,7 +322,7 @@ footer .socialLinks {
           justify-content: end;
 }
 
-.sectionFive .responsive, .sectionFive .noLimit, .sectionFive .embed {
+.featuresSection .responsive, .featuresSection .noLimit, .featuresSection .embed {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -330,7 +334,7 @@ footer .socialLinks {
           align-items: center;
 }
 
-.sectionFive .feature {
+.featuresSection .feature {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -472,5 +476,174 @@ footer .socialLinks {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 75vh;
+}
+
+.hero .imageSide {
+  width: 55%;
+  max-width: 55%;
+}
+
+.hero .heroText {
+  width: 45%;
+  min-width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.75rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 7rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  background-color: #000;
+  gap: 1em;
+}
+
+.hero .heroText h1,
+.hero .heroText p,
+.hero .heroText .link {
+  width: 100%;
+  min-width: 300px;
+}
+
+.hero .heroText .link {
+  gap: 2rem;
+}
+
+.hero .heroText h1 {
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4.2px;
+}
+
+.hero .heroText p {
+  line-height: 25px;
+  font-size: 15px;
+}
+
+.hero .heroText a {
+  color: var(--pureWhite);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.hero .heroText h1 {
+  color: #fff;
+}
+
+.hero .heroText p {
+  color: #fff;
+}
+
+.hero .heroText a {
+  color: #fff;
+}
+
+.hero .heroText p {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 25px;
+  max-width: 400px;
+}
+
+.featuresSection {
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+  row-gap: 2.5rem;
+}
+
+.featuresSection .domain, .featuresSection .exposure, .featuresSection .drag-drop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.footerBanner {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.5))), url("/assets/shared/desktop/bg-beta.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("/assets/shared/desktop/bg-beta.jpg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5rem 10rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footerBanner h1 {
+  color: #fff;
+  font-size: 40px;
+  letter-spacing: 4.2px;
+  text-transform: uppercase;
+  max-width: 35%;
+}
+
+.pricing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.pricing .pricingCards {
+  width: 100vw;
+  padding: 2rem 10%;
+  height: 70vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 85% 1fr;
+      grid-template-rows: 1fr 85% 1fr;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.pricing .pricingCards .price1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 2/1/-1/2;
+}
+
+.pricing .pricingCards .pricingPro {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1/2/4/3;
+}
+
+.pricing .pricingCards .price2 {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-area: 2/3/-1/4;
 }
 /*# sourceMappingURL=main.css.map */

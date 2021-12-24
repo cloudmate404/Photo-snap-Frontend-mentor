@@ -1,0 +1,49 @@
+.hero{
+    @include sectionEach($height75: false);
+    .imageSide{
+        width: 55%;
+        max-width: 55%;
+       
+    }
+
+    .heroText{
+        @include textBox ($light: false);
+        gap: 1em;
+        p{
+            color: rgba($color: #fff, $alpha: .6);
+            line-height: 25px;
+            max-width: 400px;
+        }
+        
+    }
+}
+
+.featuresSection{
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 2.5rem;
+    .domain,.exposure,.drag-drop{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+}
+
+
+.footerBanner{
+    background: $imgDarkener, url('/assets/shared/desktop/bg-beta.jpg');
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 10rem;
+    @include bgDefault;
+
+    h1{
+        color: $pureWhite;
+        font-size: $H1;
+        letter-spacing: 4.2px;
+        text-transform: uppercase;
+        max-width: 35%;
+
+    }
+}
+

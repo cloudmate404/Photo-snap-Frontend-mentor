@@ -1,0 +1,26 @@
+
+
+.pricing{
+    display: flex;
+    flex-direction: column;
+
+    .pricingCards{
+        width: 100vw;
+        padding: 2rem 10%;
+        height: $section65;
+
+        display: grid;
+        grid-template-rows: 1fr 85% 1fr;
+        grid-template-columns: repeat(3, 1fr);
+
+        .price1{
+            grid-area: 2/1/-1/2;
+        }
+        .pricingPro{
+            grid-area: 1/2/4/3;
+        }
+        .price2{
+            grid-area: 2/3/-1/4;
+        }
+    }
+}
