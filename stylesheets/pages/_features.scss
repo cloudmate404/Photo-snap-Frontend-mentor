@@ -18,7 +18,8 @@
     }
 }
 
-.featuresSection{
+.featuredMain{
+    @include featured;
     grid-template-rows: repeat(4, 1fr);
     row-gap: 2.5rem;
     .domain,.exposure,.drag-drop{

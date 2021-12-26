@@ -3,33 +3,102 @@
 // -----------------------------------------------------------------------------
 footer{
     background-color: $pureBlack;
+    padding: 3rem 10rem;
+    width: 100%;
 
-    .socialLinks{
+    display: grid;
+    grid-template-columns: 1fr 50% 1fr ;
+
+
+    .logoNav{
         display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
 
-        // .facebook{
-        //     color: purple;
-        //     &:hover{
-        //         color: #63AFDB;
-        //     }
-        // }
-        
+
+
+        .socialLinks{
+            display: flex;
+            gap: 0.875rem;
+    
+            .socialLink{
+                cursor: pointer;
+                filter: grayscale(100%);
+                transition: 0.25s;
+                &:hover{
+                    filter: grayscale(0%);
+                }
+            }
        
+        }
+    }
+
+
+    .footerNav{
+        display: flex;
+        flex-direction: column;
+        gap: 1.125rem;
+
+        .footerNavLink{
+            text-transform: uppercase;
+            font-size: $a;
+            letter-spacing: 2px;
+            font-weight: 700;
+            color: $pureWhite;
+            transition: 0.4s;
+
+            &:hover,&:active,&:focus{
+                opacity: 0.3;
+            }
+
+            a:visited {
+                color: $pureWhite;
+            }
+        }
         
-        // .facebook{
+    }
+
+
+    .rights{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        p{
+            color: $pureWhite;
+            font-size: $p;
+            opacity: 0.6;
+        }
+    }
+
+   
+}
+
+@media (max-width: $tablet){
+    footer{
+        min-height: 40vh;
+        grid-template-columns: 1.5fr 1fr;
+        grid-template-rows: 1fr 2fr;
+        padding: 5rem 2.5rem;
+        gap: 2rem;
+
+        .logoNav{
+            grid-area: 1/1/3/2;
+        }
+
+        nav{
             
-        //     .facebookBW{
-        //         display: block;
-        //         &:hover{
-        //             display: none;
-        //         }
-        //     }
-        //     .facebookCO{
-        //         display: none;
-        //         &:hover{
-        //             display: block;
-        //         }
-        //     }
-        // }
+            grid-column: 1/2;
+            grid-row: 2;
+            .footerNav{
+                flex-direction: row;
+            }
+        }
+
+        .rights{
+            grid-area: 1/2/3/3;
+        }
     }
 }

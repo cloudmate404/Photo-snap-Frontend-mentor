@@ -72,7 +72,7 @@
 
 
 //Colors
-  $mainAccent: linear-gradient(360deg,#FFC593, #BC7198, #5A77FF);
+  $mainAccent: linear-gradient(90deg,#FFC593, #BC7198, #5A77FF);
   $pureBlack : #000;
   $lightGrey: #dfdfdf;
   $pureWhite: #fff;
@@ -88,7 +88,11 @@
   //SectionHeight
   $section75: 80vh;
   $section70: 75vh;
-  $section65:70vh;
+  $section65:65vh;
 
   //image darkener
   $imgDarkener: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
+
+
+  //Screenstates
+  $tablet: 1000px;

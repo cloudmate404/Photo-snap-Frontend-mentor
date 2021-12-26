@@ -1,3 +1,25 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+
+//button with black BG
+.btn1{
+    @include buttonNormal($light:false);
+}
+
+//button with White BG
+.btn2{
+    @include buttonNormal($light:true);
+}
+
+
+//BLACK LINK
+.btnB{
+    @include buttonLink($letterLight:false);
+}
+
+
+//WHITE LINK
+.btnW{
+    @include buttonLink($letterLight:true);
+}

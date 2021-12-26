@@ -41,7 +41,7 @@
   flex-direction: column;
   gap: 1.75rem;
   align-items: flex-start;
-  padding: 7rem;
+  padding: 8%;
   // margin: 0 auto;
   justify-content: center;
   height: 100%;
@@ -50,6 +50,8 @@
   .link{
     width: 100%;
     min-width: 300px;
+    max-width: 550px;
+    overflow-y: hidden;
     // margin: 0 auto;
   }
   .link{
@@ -96,7 +98,7 @@
     a{
         color: $pureWhite;
     }
-}
+  }
 }
 
 @mixin sectionEach ($height75: false){
@@ -174,4 +176,126 @@
   background-position: center;
   background-size:cover ;
   background-repeat: no-repeat;
+}
+
+@mixin featured{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.875rem;
+  padding: clamp(20px, 100px, 10rem);
+  align-self: flex-end;
+  justify-content: end;
+
+  .responsive, .noLimit, .embed{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2em;
+    padding: 0 2em;
+    text-align: center;
+    
+  }
+}
+
+
+@mixin priceCard($light:false){
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 700;
+  text-align: center;
+
+  &>*{
+    max-width: 80%;
+  }
+  h2{
+    font-size: $H2;
+  }
+  p{
+    font-size: $p;
+    line-height: 25px;
+    font-weight: 400;
+    opacity: 0.6;
+    margin-bottom: 2rem;
+    
+  }
+  h1{
+    
+    font-size: $H1;
+  }
+
+  @if $light{
+    color: $pureBlack;
+    background-color: #F5F5F5;
+    padding: 3.375rem 2.5rem;
+
+  }@else{
+    color: $pureWhite;
+    background-color: $pureBlack;
+    padding: 3.375rem 2.5rem;
+  }
+
+}
+
+
+@mixin buttonNormal($light:false) {
+    font-size: $H4;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 1em 2em;
+    border: none;
+    transition: 0.4s ease-in-out;
+
+    @if $light{
+      background-color: $pureWhite;
+      color: $pureBlack;
+
+      &:hover,&:active,&:focus{
+        background-color: $lightGrey;
+      }
+
+    }@else{
+      background-color: $pureBlack;
+      color:  $pureWhite;
+
+      &:hover,&:active,&:focus{
+        background-color: $lightGrey;
+        color:$pureBlack;
+      }
+    }
+}
+
+@mixin buttonLink($letterLight:false) {
+    font-size: $H4;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.4s;
+
+    @if $letterLight{
+      color: $pureWhite;
+
+      &:hover,&:active,&:focus{
+        border-bottom: 2px solid $pureWhite;
+      }
+
+    }@else{
+      color: $pureBlack;
+
+      &:hover,&:active,&:focus{
+        border-bottom: 2px solid $pureBlack;
+
+      }
+    }
 }

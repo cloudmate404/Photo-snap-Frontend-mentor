@@ -31,6 +31,8 @@
 .imgCards{
     display: flex;
     
+
+    
     .link{
         margin-top: 1.5em;
         justify-content: space-between;
@@ -66,36 +68,93 @@
         padding: 2em 2em;
         background-image: 100%;
         @include bgDefault;
+        position: relative;
+        top: 0;
+        transition: top ease-in-out 0.5s;
+        
+
+        &:hover,&:focus,&:active{
+            top: -20px;
+            
+            border-bottom: 10px solid transparent;
+            border-image: $mainAccent;
+            border-image-slice: 1;
+            // height: 70vh;
+        }
     }
     hr{
-        border-top: 1px solid var(--pureWhite);
+        border-top: 1px solid $pureWhite;
     }
 }
 
 .featuresSection{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 1.875rem;
-    padding: 10rem;
-    align-self: flex-end;
-    justify-content: end;
+    @include featured;
 
-    .responsive, .noLimit, .embed{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .feature{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 2em;
-        padding: 0 2em;
-        text-align: center;
-        
-    }
+    
 }
 
+
+@media (max-width: $tablet){
+    .sectionOne{
+        @include sectionEach($height75: true);
+        .imgOne{
+            width: 40%;
+            max-width: 40%;
+            
+        }
+    
+        .heroText{
+            @include textBox ($light: false);
+            width: 60%;
+        }
+    }
+    
+    .sectionTwo, .sectionThree{
+        @include sectionEach($height75: false);
+    
+        .imgHm{
+            width: 40%;
+            max-width: 40%;
+            min-width: 40%;
+        }
+    
+        .textBox{
+            @include textBox ($light: true);
+            width: 60%;
+        }
+    }
+
+
+    .imgCards{
+        .imgCard{
+            width: 50%;
+
+        }
+    }
+
+    .featuresSection{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        padding: clamp(20px, 60px, 10rem);
+
+
+        .responsive, .noLimit, .embed{
+            
+            justify-content: center;
+            align-items: flex-end;
+        }
+        .featureRes{
+            grid-row: 2/3;
+        }
+        .featureLimit{
+            grid-row: 4/5;
+        }
+        .featureEmbed{
+            grid-row: 6/7;
+        }
+        .feature{
+            max-width: 85%;
+            margin: 0 auto;
+        }
+    }
+}

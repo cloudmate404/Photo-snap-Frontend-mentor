@@ -13,6 +13,23 @@ header{
     .mainNav{
         display: flex;
         gap: 3.5rem;
+        
+        .mainNavLink{
+            text-transform: uppercase;
+            font-size: $a;
+            letter-spacing: 2px;
+            font-weight: 700;
+            color: $pureBlack;
+            transition: 0.4s;
+
+            &:hover,&:active,&:focus{
+                opacity: 0.3;
+            }
+
+            a:visited {
+                color: $pureBlack;
+            }
+        }
 
     }
 }
