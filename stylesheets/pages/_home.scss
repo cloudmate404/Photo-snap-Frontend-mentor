@@ -70,11 +70,11 @@
         @include bgDefault;
         position: relative;
         top: 0;
-        transition: top ease-in-out 0.5s;
+        transition: top ease 0.5s;
         
 
         &:hover,&:focus,&:active{
-            top: -20px;
+            top: -30px;
             
             border-bottom: 10px solid transparent;
             border-image: $mainAccent;

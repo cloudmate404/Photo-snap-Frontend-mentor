@@ -8,8 +8,21 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 10%;
+    padding: 1.5rem 10rem;
+    
 
+        
+        nav{
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+    
+    
+       
+    .headerHr{
+        display: none;
+    }
     .mainNav{
         display: flex;
         gap: 2.5rem;
@@ -32,6 +45,73 @@ header{
         }
 
     }
+
+    .openMenu, .closeMenu{
+        display: none;
+    }
+}
+
+
+@media (max-width: $tablet){
+    header{
+        padding: 1.75rem 2.5rem ;
+
+        .mainNav{
+            gap: 2rem;
+        }
+    }
+}
+
+
+
+@media (max-width:$menu ){
+
+   header{
+       nav, .headerBtn{
+        display: none;
+       }
+        
+    //   position: absolute;  
+        background-color: $pureWhite;
+       nav{
+        width: 100%;
+       }
+       .headerBtn{
+           width: 100%;
+           font-size: $p;
+            letter-spacing: 2.5px;
+       }
+       .headerIcons{
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+           width: 100%;
+       }
+       .headerHr{
+           display: block;
+       }
+       .openMenu{
+           display: block;
+       }
+       .mainNav{
+           flex-direction: column;
+           align-items: center;
+           width: 100%;
+           padding: 2rem;
+           border-bottom: 1px solid $pureBlack;
+           transition: top 1s ease;
+           .mainNavLink{
+            font-size: $p;
+            letter-spacing: 2.5px;
+
+           }
+       }
+
+       display: flex;
+       flex-direction: column;
+       gap: 2rem;
+   }
+    
 }
 
 

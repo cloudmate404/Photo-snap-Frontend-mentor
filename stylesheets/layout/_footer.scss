@@ -78,7 +78,7 @@ footer{
 
 @media (max-width: $tablet){
     footer{
-        min-height: 40vh;
+        min-height: 350px;
         grid-template-columns: 1.5fr 1fr;
         grid-template-rows: 1fr 2fr;
         padding: 5rem 2.5rem;

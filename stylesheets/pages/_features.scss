@@ -3,6 +3,8 @@
     .imageSide{
         width: 55%;
         max-width: 55%;
+        object-fit: cover;
+        object-position: center;
        
     }
 
@@ -26,6 +28,14 @@
         display: flex;
         justify-content: center;
         align-items: flex-end;
+    }
+    .featureHome{
+        display: flex;
+        flex-direction: column;
+        
+        // align-items: center;
+        gap: 1rem;
+        text-align: center;
     }
 }
 
@@ -51,10 +61,28 @@
 
 
 @media (max-width:$tablet){
+    .hero{
+        .imageSide{
+            width: 40%;
+            max-width: 40%;
+           
+        }
+        .imageFeatures{
+            object-position: -100px -0px;
+
+        }
+    
+        .heroText{
+            width: 60%;
+            max-width: 60%;
+            
+        }
+    }
+
     .featuredMain{
         grid-template-rows: repeat(6, 1fr);
         grid-template-columns: repeat(2, 1fr);
-        column-gap: 1rem;
+        column-gap: 1.5rem;
         padding: 5rem 2.5rem;
         
         .responsive{
@@ -81,6 +109,7 @@
             
             text-align: center;
             gap: 1rem;
+            max-width: 90%;
         }
     }
 
@@ -92,4 +121,9 @@
 
         }
     }
+}
+
+
+@media (max-width: $tablet){
+
 }

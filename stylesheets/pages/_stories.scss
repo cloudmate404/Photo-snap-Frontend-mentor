@@ -100,10 +100,12 @@
     .heroStories{
         grid-template-columns: 1.5fr 1fr;
         padding: 15% 2.5rem 0 2.5rem;
+        
+
 
 
         .storiesHeroText{
-            max-width: max(90%, 400);
+            max-width: 85%;
         }
     }
 }
