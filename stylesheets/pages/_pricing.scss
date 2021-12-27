@@ -54,3 +54,32 @@
         }
     }
 }
+
+ 
+@media (max-width: $tablet){
+    .pricing{
+
+        .pricingCards{
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: 1fr 1fr;
+
+            .price1{
+                grid-area: 1/1/2/3;
+            }
+            .pricingPro{
+                grid-area: 2/1/3/3;
+            }
+            .price2{
+                grid-area: 3/1/4/3;
+            }
+
+
+            .pricingB,.pricingPro{
+               height: 30vh;
+               flex-direction: row;
+            }
+            
+            
+        }
+    }
+}

@@ -14,7 +14,7 @@
     .storiesHeroText{
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.5rem;
         max-width: 450px;
        
 
@@ -92,5 +92,18 @@
 
     .imgCard{
         @include bgDefault;
+    }
+}
+
+
+@media (max-width:$tablet){
+    .heroStories{
+        grid-template-columns: 1.5fr 1fr;
+        padding: 15% 2.5rem 0 2.5rem;
+
+
+        .storiesHeroText{
+            max-width: max(90%, 400);
+        }
     }
 }
