@@ -124,6 +124,103 @@
 }
 
 
-@media (max-width: $tablet){
+@media (max-width: $mobile){
+    .hero{
+        flex-direction: column-reverse;
+        
+        .imageSide{
+            min-width: 100%;
+            height: 100vw;
+            
+        }
+        .imageFeatures{
+            object-position: center;
+
+        }
+    
+        .heroText{
+            min-width: 100%;
+           @include textBoxMobile;
+
+        }
+    }
+
+
+    .featuredMain{
+        grid-template-rows: repeat(12,1fr);
+        column-gap: 0rem;
+        grid-template-columns: 1fr;
+        padding: 5rem 2.5rem;
+        
+        .responsive{
+            grid-row: 1/2;
+        }
+        .featureRes{
+            grid-row: 2/3;
+        }
+
+        .noLimit{
+            grid-area: 3/1/4/2;
+        }
+
+        .featureLimit{
+            grid-row: 4/5;
+        }
+        .embed{
+            grid-row: 5/6;
+        }
+        .featureEmbed{
+            grid-row: 6/7;
+        }
+        .domain{
+            grid-row: 7/8;
+        }
+        .featureDomain{
+            grid-row: 8/9;
+        }
+        .exposure{
+            grid-row: 9/10;
+        }
+        .featureExp{
+            grid-row: 10/11;
+        }
+        .drag-drop{
+            grid-row: 11/12;
+        }
+        .featureDrag{
+            grid-row: 12/13;
+        }
+        
+        .feature, .featureHome{
+            grid-column: 1/2;
+        }
+        .feature{
+            justify-self: center;
+            align-self: end;
+        }
+        .featureHome{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            // gap: 1rem;
+        }
+    }
+
+    .footerBanner{
+        flex-direction: column;
+        padding: 4rem 2rem;
+
+        align-items: flex-start;
+        gap: 1.5rem;
+
+        h1{
+            font-size: $h1;
+            letter-spacing: 3px;
+            max-width: 100%;
+    
+        }
+    }
+
 
 }

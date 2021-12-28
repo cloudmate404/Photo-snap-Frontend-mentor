@@ -11,16 +11,24 @@
   <title>Frontend Mentor | Photosnap Website Challenge</title>
 </head>
 <body>
-  <header>
-    <a href="/index.html"><img src="./assets/shared/desktop/logo.svg" alt="Logo"></a>
-    <nav>
+  <header class="header">
+
+    <div class="headerIcons">
+      <a href="/index.html"><img src="./assets/shared/desktop/logo.svg" alt="Logo" class="logo"></a>
+      <img src="./assets/shared/mobile/menu.svg" alt="" class="openMenu">
+      <img src="./assets/shared/mobile/close.svg" alt="" class="closeMenu">
+    </div>
+    <nav class="nav">
       <ul class="mainNav">
         <li class="mainNavLink"><a href="/stories.html">Stories</a></li>
         <li class="mainNavLink"><a href="/features.html">Features</a></li>
         <li class="mainNavLink"><a href="/pricing.html">Pricing</a></li>
       </ul>
     </nav>
-    <button class="btn1">Get an invite</button>
+    <button class="btn1 headerBtn">Get an invite</button>
+
+    
+    
   </header>
 
   <div class="heroPricing hero">
@@ -35,25 +43,34 @@
     <div class="toggle">
     </div>
     <div class="pricingCards">
-      <div class="pricingB price1">
+      <div class="pricingB price1 priceCard">
         <h2>Basic</h2>
         <p>Includes basic usage of our platform. Recommended for new and aspiring photographers.</p>
-        <h1>$19.00</h1>
-        <p>per month</p>
+        <div class="charge">
+          <h1>$19.00</h1>
+          <p>per month</p>
+        </div>
+        
         <button class="btn1">Pick Plan</button>
       </div>
-      <div class="pricingPro">
+      <div class="pricingPro priceCard">
         <h2>Pro</h2>
         <p>More advanced features available. Recommended for photography veterans and professionals.</p>
-        <h1>$39.00</h1>
-        <p>per month</p>
+        <div class="charge">
+          <h1>$39.00</h1>
+          <p>per month</p>
+        </div>
+       
         <button class="btn2">Pick Plan</button>
       </div>
-      <div class="pricingB price2">
+      <div class="pricingB price2 priceCard">
         <h2>Business</h2>
         <p>Additional features available such as more detailed metrics. Recommended for business owners.</p>
-        <h1>$99.00</h1>
+        <div class="charge">
+          <h1>$99.00</h1>
         <p>per month</p>
+        </div>
+        
         <button class="btn1">Pick Plan</button>
       </div>
     </div>
@@ -123,8 +140,8 @@
  
   <div class="footerBanner">
     <h1>We're in Beta. Get your invite today!</h1>
-    <div class="link">
-      <a href="#" class="btnW">get an invite</a>  //////
+    <div class="link spaceLink">
+      <a href="#" class="btnW">get an invite</a>  
       <img src="./assets/shared/desktop/arrowWhite.svg" alt="">
     </div>
   </div>
@@ -150,8 +167,8 @@
       </ul>
     </nav>
     <div class="rights">
-      <div class="link">
-        <a href="#" class="btnW">get an invite</a> //////
+      <div class="link spaceLink">
+        <a href="#" class="btnW">get an invite</a> 
         <img src="./assets/shared/desktop/arrowWhite.svg" alt="">
       </div>
       <p>Copyright 2019. All Rights Reserved</p>
@@ -187,6 +204,6 @@
   $990.00 per year
   Pick Plan -->
 
-
+  <script src="./main.js"></script>
 </body>
 </html>

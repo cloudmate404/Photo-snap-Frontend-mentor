@@ -3,7 +3,7 @@
 .pricing{
     display: flex;
     flex-direction: column;
-    padding: 5% ;
+    padding: 5rem ;
 
     .pricingCards{
         width: 100%;
@@ -58,10 +58,13 @@
  
 @media (max-width: $tablet){
     .pricing{
+        padding: 2.5rem ;
+
 
         .pricingCards{
             grid-template-rows: repeat(3, 1fr);
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1.5fr 1fr;
+            row-gap: 2rem;
 
             .price1{
                 grid-area: 1/1/2/3;
@@ -72,14 +75,75 @@
             .price2{
                 grid-area: 3/1/4/3;
             }
+            .priceCard{
+                display: grid;
+                grid-template-columns: subgrid;
+                text-align: left;
+                padding: 2.5rem;
+
+                h2,p,button{
+                    grid-column: 1;
+                    max-width: 80%;
+                   
+                }
+                button{
+                    margin-top: -1rem;
+                }
+                .charge{
+                    grid-column: 2;
+                    display: flex;
+                    flex-direction: column;
+                    max-width: 100%;
+                    align-items: flex-end;
+                    margin-top: -5rem;
+                    
+                }
+                
+            }
 
 
             .pricingB,.pricingPro{
-               height: 30vh;
+            //    height: 30vh;
                flex-direction: row;
             }
             
             
+        }
+    }
+}
+
+
+@media (max-width: $mobile) {
+    .pricing{
+
+
+        .pricingCards{
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: 1fr;
+            row-gap: 2rem;
+
+            .price1{
+                grid-area: 1/1/2/2;
+            }
+            .pricingPro{
+                grid-area: 2/1/3/2;
+            }
+            .price2{
+                grid-area: 3/1/4/2;
+            }
+
+            .priceCard{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                padding: 4rem 0;
+
+
+                .charge{
+                    margin-top: 0rem;
+                    align-items: center;
+                }
+            }
         }
     }
 }

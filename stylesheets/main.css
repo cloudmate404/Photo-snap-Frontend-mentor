@@ -39,6 +39,16 @@ a {
           align-items: center;
 }
 
+.spaceLink {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 /**
  * Basic typography style for copy text
  */
@@ -143,9 +153,6 @@ header .openMenu, header .closeMenu {
         -ms-flex-pack: justify;
             justify-content: space-between;
     width: 100%;
-  }
-  header .headerHr {
-    display: block;
   }
   header .openMenu {
     display: block;
@@ -306,6 +313,51 @@ footer .rights p {
   }
 }
 
+@media (max-width: 650px) {
+  footer {
+    padding: 4rem 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 3rem;
+  }
+  footer .logoNav {
+    gap: 2rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .logoNav .socialLinks {
+    gap: 0.75rem;
+  }
+  footer nav .footerNav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .rights {
+    margin-top: 3rem;
+    gap: 2.5rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .btn1 {
   font-size: 12px;
   font-weight: 700;
@@ -435,6 +487,7 @@ footer .rights p {
 .sectionOne .heroText p {
   line-height: 25px;
   font-size: 15px;
+  opacity: 0.6;
 }
 
 .sectionOne .heroText a {
@@ -516,6 +569,7 @@ footer .rights p {
 .sectionTwo .textBox p, .sectionThree .textBox p {
   line-height: 25px;
   font-size: 15px;
+  opacity: 0.6;
 }
 
 .sectionTwo .textBox a, .sectionThree .textBox a {
@@ -537,6 +591,7 @@ footer .rights p {
 }
 
 .imgCards {
+  padding-top: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -715,6 +770,7 @@ footer .rights p {
   .sectionOne .heroText p {
     line-height: 25px;
     font-size: 15px;
+    opacity: 0.6;
   }
   .sectionOne .heroText a {
     color: var(--pureWhite);
@@ -786,6 +842,7 @@ footer .rights p {
   .sectionTwo .textBox p, .sectionThree .textBox p {
     line-height: 25px;
     font-size: 15px;
+    opacity: 0.6;
   }
   .sectionTwo .textBox a, .sectionThree .textBox a {
     color: var(--pureWhite);
@@ -840,18 +897,96 @@ footer .rights p {
   }
 }
 
+@media (max-width: 650px) {
+  .sectionOne {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .sectionOne .imgOne {
+    min-width: 100%;
+    height: 80vw;
+  }
+  .sectionOne .heroText {
+    width: 100%;
+    height: 115vw;
+    gap: 1rem;
+    padding: 2.5rem 1.5rem;
+  }
+  .sectionOne .heroText h1 {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 3px;
+  }
+  .sectionTwo, .sectionThree {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .sectionTwo .imgHm, .sectionThree .imgHm {
+    min-width: 100%;
+    height: 75vw;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .sectionTwo .textBox, .sectionThree .textBox {
+    width: 100%;
+    height: 115vw;
+    gap: 1rem;
+    padding: 2.5rem 1.5rem;
+  }
+  .sectionTwo .textBox h1, .sectionThree .textBox h1 {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 3px;
+  }
+  .imgCards {
+    padding: 0;
+  }
+  .imgCards .imgCard {
+    width: 100%;
+    height: 100vw;
+  }
+  .imgCards .imgCard h4 {
+    font-size: 18px;
+  }
+  .imgCards .imgCard p {
+    font-size: 13px;
+  }
+  .featuresSection {
+    padding: 4rem 0;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    row-gap: 3rem;
+  }
+  .featuresSection .feature {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
 .heroStories {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  height: 80vh;
+}
+
+.heroStories .bgHero {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: 1/1/-1/4;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.5))), url("/assets/stories/desktop/moon-of-appalacia.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("/assets/stories/desktop/moon-of-appalacia.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 15vh 0 0 7rem;
-  height: 80vh;
 }
 
 .heroStories .storiesHeroText {
@@ -864,6 +999,12 @@ footer .rights p {
           flex-direction: column;
   gap: 1.5rem;
   max-width: 450px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1/1/-1/2;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding-left: 5rem;
 }
 
 .heroStories .storiesHeroText .featured, .heroStories .storiesHeroText .storyTitle {
@@ -968,12 +1109,43 @@ footer .rights p {
 
 @media (max-width: 1000px) {
   .heroStories {
-    -ms-grid-columns: 1.5fr 1fr;
-        grid-template-columns: 1.5fr 1fr;
-    padding: 15% 2.5rem 0 2.5rem;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
   }
   .heroStories .storiesHeroText {
-    max-width: 85%;
+    padding-left: 3rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .heroStories {
+    padding: 0;
+    height: 100vh;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 35% 65%;
+        grid-template-rows: 35% 65%;
+    overflow-y: hidden;
+  }
+  .heroStories .bgHero {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .heroStories .storiesHeroText {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    background-color: #000;
+    min-height: 100%;
+    min-width: 100%;
+    padding: 3.5rem 1.5rem;
+    gap: 1rem;
+  }
+  .heroStories .storiesHeroText .storyDescription {
+    font-size: 15px;
   }
 }
 
@@ -1040,6 +1212,7 @@ footer .rights p {
 .hero .heroText p {
   line-height: 25px;
   font-size: 15px;
+  opacity: 0.6;
 }
 
 .hero .heroText a {
@@ -1249,6 +1422,149 @@ footer .rights p {
   }
 }
 
+@media (max-width: 650px) {
+  .hero {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .hero .imageSide {
+    min-width: 100%;
+    height: 100vw;
+  }
+  .hero .imageFeatures {
+    -o-object-position: center;
+       object-position: center;
+  }
+  .hero .heroText {
+    min-width: 100%;
+    width: 100%;
+    height: 115vw;
+    gap: 1rem;
+    padding: 2.5rem 1.5rem;
+  }
+  .hero .heroText h1 {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 3px;
+  }
+  .featuredMain {
+    -ms-grid-rows: (1fr)[12];
+        grid-template-rows: repeat(12, 1fr);
+    -webkit-column-gap: 0rem;
+            column-gap: 0rem;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding: 5rem 2.5rem;
+  }
+  .featuredMain .responsive {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .featuredMain .featureRes {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  .featuredMain .noLimit {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 3/1/4/2;
+  }
+  .featuredMain .featureLimit {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+  }
+  .featuredMain .embed {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+  }
+  .featuredMain .featureEmbed {
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 1;
+    grid-row: 6/7;
+  }
+  .featuredMain .domain {
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 1;
+    grid-row: 7/8;
+  }
+  .featuredMain .featureDomain {
+    -ms-grid-row: 8;
+    -ms-grid-row-span: 1;
+    grid-row: 8/9;
+  }
+  .featuredMain .exposure {
+    -ms-grid-row: 9;
+    -ms-grid-row-span: 1;
+    grid-row: 9/10;
+  }
+  .featuredMain .featureExp {
+    -ms-grid-row: 10;
+    -ms-grid-row-span: 1;
+    grid-row: 10/11;
+  }
+  .featuredMain .drag-drop {
+    -ms-grid-row: 11;
+    -ms-grid-row-span: 1;
+    grid-row: 11/12;
+  }
+  .featuredMain .featureDrag {
+    -ms-grid-row: 12;
+    -ms-grid-row-span: 1;
+    grid-row: 12/13;
+  }
+  .featuredMain .feature, .featuredMain .featureHome {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+  .featuredMain .feature {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+  }
+  .featuredMain .featureHome {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footerBanner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 4rem 2rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .footerBanner h1 {
+    font-size: 32px;
+    letter-spacing: 3px;
+    max-width: 100%;
+  }
+}
+
 .pricing {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1257,7 +1573,7 @@ footer .rights p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 5%;
+  padding: 5rem;
 }
 
 .pricing .pricingCards {
@@ -1407,11 +1723,15 @@ footer .rights p {
 }
 
 @media (max-width: 1000px) {
+  .pricing {
+    padding: 2.5rem;
+  }
   .pricing .pricingCards {
     -ms-grid-rows: (1fr)[3];
         grid-template-rows: repeat(3, 1fr);
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1.5fr 1fr;
+        grid-template-columns: 1.5fr 1fr;
+    row-gap: 2rem;
   }
   .pricing .pricingCards .price1 {
     -ms-grid-row: 1;
@@ -1434,12 +1754,91 @@ footer .rights p {
     -ms-grid-column-span: 2;
     grid-area: 3/1/4/3;
   }
+  .pricing .pricingCards .priceCard {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: subgrid;
+        grid-template-columns: subgrid;
+    text-align: left;
+    padding: 2.5rem;
+  }
+  .pricing .pricingCards .priceCard h2, .pricing .pricingCards .priceCard p, .pricing .pricingCards .priceCard button {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    max-width: 80%;
+  }
+  .pricing .pricingCards .priceCard button {
+    margin-top: -1rem;
+  }
+  .pricing .pricingCards .priceCard .charge {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 100%;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin-top: -5rem;
+  }
   .pricing .pricingCards .pricingB, .pricing .pricingCards .pricingPro {
-    height: 30vh;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+}
+
+@media (max-width: 650px) {
+  .pricing .pricingCards {
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+  .pricing .pricingCards .price1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 1/1/2/2;
+  }
+  .pricing .pricingCards .pricingPro {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 2/1/3/2;
+  }
+  .pricing .pricingCards .price2 {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 3/1/4/2;
+  }
+  .pricing .pricingCards .priceCard {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    padding: 4rem 0;
+  }
+  .pricing .pricingCards .priceCard .charge {
+    margin-top: 0rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 /*# sourceMappingURL=main.css.map */

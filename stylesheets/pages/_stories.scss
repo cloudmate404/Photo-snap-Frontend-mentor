@@ -1,23 +1,29 @@
 .heroStories{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    background-image: $imgDarkener,url('/assets/stories/desktop/moon-of-appalacia.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 15vh 0 0 7rem;
+    grid-template-rows: 1fr ;
+    
+    
     height: $section75;
     
 
-    
+    .bgHero{
+        
+        grid-area: 1/1/-1/4;
+        background-image: $imgDarkener,url('/assets/stories/desktop/moon-of-appalacia.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 
     .storiesHeroText{
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
         max-width: 450px;
-       
-
+        grid-area: 1/1/-1/2;
+        align-self: center;
+        padding-left: 5rem;
 
         .featured,.storyTitle{
             text-transform: uppercase;
@@ -98,14 +104,42 @@
 
 @media (max-width:$tablet){
     .heroStories{
-        grid-template-columns: 1.5fr 1fr;
-        padding: 15% 2.5rem 0 2.5rem;
+        grid-template-columns: 1fr 1fr;
+        
         
 
 
+        .storiesHeroText{
+           padding-left: 3rem;
+        }
+    }
+}
+
+
+@media (max-width: $mobile) {
+    .heroStories{
+        padding: 0;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 35% 65%;
+        overflow-y: hidden;
+
+        .bgHero{
+            grid-row: 1/2;
+        }
 
         .storiesHeroText{
-            max-width: 85%;
+            grid-row: 2/3;
+            background-color: $pureBlack;
+            min-height: 100%;
+            min-width: 100%;
+            padding: 3.5rem 1.5rem;
+            gap: 1rem;
+            .storyDescription{
+                font-size: $p;
+            }
+
         }
     }
 }

@@ -9,12 +9,11 @@ openMenu.addEventListener('click', ()=>{
     openMenu.style.display ='none'
     closeMenu.style.display = 'block'
     header.style.position = 'absolute'
-    header.style.zIndex = '10'
     nav.style.display ='block'
     headerBtn.style.display ='block'
-    header.style.transition = 'top 1s ease'
-    nav.style.transition = 'all ease 2s'
-    headerBtn.style.transition = 'top 1s ease'
+    // header.style.transition = 'top 1s ease'
+    // nav.style.transition = 'all ease 2s'
+    // headerBtn.style.transition = 'top 1s ease'
 
 })
 

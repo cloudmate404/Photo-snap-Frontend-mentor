@@ -67,6 +67,7 @@
   p{
     line-height: 25px;
     font-size: $p;
+    opacity: 0.6;
   }
   a{
     color: var(--pureWhite);
@@ -298,4 +299,17 @@
 
       }
     }
+}
+
+
+@mixin textBoxMobile{
+  width: 100%;
+  height: 115vw;
+  gap: 1rem;
+  padding: 2.5rem 1.5rem;
+  h1{
+      font-size: $h1;
+      line-height: 40px;
+      letter-spacing: 3px;
+  }
 }

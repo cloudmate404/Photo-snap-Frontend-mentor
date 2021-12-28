@@ -29,6 +29,7 @@
 }
 
 .imgCards{
+    padding-top: 1.5rem;
     display: flex;
     
 
@@ -154,6 +155,71 @@
         }
         .feature{
             max-width: 85%;
+            margin: 0 auto;
+        }
+    }
+}
+
+
+@media (max-width: $mobile){
+    .sectionOne{
+        flex-direction: column-reverse;
+        
+        .imgOne{
+            min-width: 100%;
+            height: 80vw;
+            
+        }
+    
+        .heroText{
+           @include textBoxMobile;
+
+        }
+    }
+
+
+    .sectionTwo, .sectionThree{
+        flex-direction: column;
+        .imgHm{
+            min-width: 100%;
+            height: 75vw;
+            order: -1;
+        }
+    
+        .textBox{
+            @include textBoxMobile;
+
+
+        }
+    }
+
+
+    .imgCards{
+        padding: 0;
+        .imgCard{
+            width: 100%;
+            height: 100vw;
+
+            h4{
+                font-size: $H3;
+            }
+            p{
+                font-size: $psmall;
+            }
+        }
+    }
+
+
+    .featuresSection{
+        padding: 4rem 0;
+
+        // grid-template-rows: 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr;
+        grid-template-rows: auto;
+        row-gap: 3rem;
+
+
+        .feature{
+            max-width: 100%;
             margin: 0 auto;
         }
     }

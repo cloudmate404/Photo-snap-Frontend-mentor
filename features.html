@@ -12,16 +12,24 @@
 </head>
 <body>
 
-  <header>
-    <a href="/index.html"><img src="./assets/shared/desktop/logo.svg" alt="Logo"></a>
-    <nav>
+  <header class="header">
+
+    <div class="headerIcons">
+      <a href="/index.html"><img src="./assets/shared/desktop/logo.svg" alt="Logo" class="logo"></a>
+      <img src="./assets/shared/mobile/menu.svg" alt="" class="openMenu">
+      <img src="./assets/shared/mobile/close.svg" alt="" class="closeMenu">
+    </div>
+    <nav class="nav">
       <ul class="mainNav">
         <li class="mainNavLink"><a href="/stories.html">Stories</a></li>
         <li class="mainNavLink"><a href="/features.html">Features</a></li>
         <li class="mainNavLink"><a href="/pricing.html">Pricing</a></li>
       </ul>
     </nav>
-    <button class="btn1">Get an invite</button>
+    <button class="btn1 headerBtn">Get an invite</button>
+
+    
+    
   </header>
 
   <div class="heroFeatures hero">
@@ -34,13 +42,13 @@
 
   <div class="featuredMain">
     
-    <div class="responsive">    
+    <div class="responsive feature">    
       <img src="./assets/features/desktop/responsive.svg" alt="" class="">
     </div>
-    <div class="noLimit">
+    <div class="noLimit feature">
       <img src="./assets/features/desktop/no-limit.svg" alt="" class="noLimit">
     </div>
-    <div class="embed">
+    <div class="embed feature">
       <img src="./assets/features/desktop/embed.svg" alt="" class="embed">
     </div>
 
@@ -114,8 +122,8 @@
 
   <div class="footerBanner">
     <h1>We're in Beta. Get your invite today!</h1>
-    <div class="link">
-      <a href="#" class="btnW" >get an invite</a> //////
+    <div class="link spaceLink">
+      <a href="#" class="btnW" >get an invite</a> 
       <img src="./assets/shared/desktop/arrowWhite.svg" alt="">
     </div>
   </div>
@@ -141,8 +149,8 @@
       </ul>
     </nav>
     <div class="rights">
-      <div class="link">
-        <a href="#" class="btnW">get an invite</a> //////
+      <div class="link spaceLink">
+        <a href="#" class="btnW">get an invite</a> 
         <img src="./assets/shared/desktop/arrowWhite.svg" alt="">
       </div>
       <p>Copyright 2019. All Rights Reserved</p>
@@ -151,6 +159,6 @@
   </footer>
 
 
-
+  <script src="./main.js"></script>
 </body>
 </html>
