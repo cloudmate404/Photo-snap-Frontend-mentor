@@ -43,15 +43,46 @@
 
 
 .comparison{
+    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
+    h2{
+        font-size: $H1;
+        font-weight: 700;
+        letter-spacing: 4.2px;
+        text-transform: uppercase;
+
+    }
 
     table{
+        margin-bottom: 10rem;
+        border-collapse: collapse;
         width: 60%;
-        tr>th{
-            border-bottom: 2px $pureBlack solid;
+        text-transform: uppercase;
+        font-size: $a;
+        font-weight: 700;
+        letter-spacing: 2px;
+        th{
+            border-bottom: 1px $pureBlack solid;
+            padding: 1.5rem;
+            // text-align: left;
+
         }
+        td{
+            border-bottom: 1px $lightGrey solid;
+            padding: 1.5rem;
+        }
+        .featureHead{
+            text-align: left;
+
+        }
+        .mark{
+            text-align: center;
+  
+        }
+        
     }
 }
 
@@ -146,4 +177,41 @@
             }
         }
     }
+
+
+
+    .comparison{
+       
+        h2{
+            font-size: $h1;
+            letter-spacing: 3px;
+        }
+    
+        table{
+            width: 60%;
+            font-size: $a;
+            font-weight: 700;
+            letter-spacing: 1px;
+            th{
+                border-bottom: 1px $pureBlack solid;
+                padding: 0.75rem;
+                // text-align: left;
+    
+            }
+            td{
+                border-bottom: 1px $lightGrey solid;
+                padding: 0.75rem;
+            }
+            .featureHead{
+                text-align: left;
+    
+            }
+            .mark{
+                text-align: center;
+      
+            }
+            
+        }
+    }
+    
 }

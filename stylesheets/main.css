@@ -49,46 +49,54 @@ a {
           justify-content: space-between;
 }
 
+.openMenu, .closeMenu {
+  cursor: pointer;
+}
+
 /**
  * Basic typography style for copy text
  */
 header {
   margin: 0 auto;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
   padding: 1.5rem 10rem;
 }
 
-header nav {
-  margin: 0 auto;
+header .headerIcons {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+header .headerIcons .openMenu, header .headerIcons .closeMenu {
+  display: none;
+  padding: 1rem;
+}
+
+header .test {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-header .headerHr {
-  display: none;
-}
-
-header .mainNav {
+.mainNav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 2.5rem;
 }
 
-header .mainNav .mainNavLink {
+.mainNav .mainNavLink {
   text-transform: uppercase;
   font-size: 12px;
   letter-spacing: 2px;
@@ -98,16 +106,12 @@ header .mainNav .mainNavLink {
   transition: 0.4s;
 }
 
-header .mainNav .mainNavLink:hover, header .mainNav .mainNavLink:active, header .mainNav .mainNavLink:focus {
+.mainNav .mainNavLink:hover, .mainNav .mainNavLink:active, .mainNav .mainNavLink:focus {
   opacity: 0.3;
 }
 
-header .mainNav .mainNavLink a:visited {
+.mainNav .mainNavLink a:visited {
   color: #000;
-}
-
-header .openMenu, header .closeMenu {
-  display: none;
 }
 
 @media (max-width: 1000px) {
@@ -119,61 +123,61 @@ header .openMenu, header .closeMenu {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 850px) {
   header {
-    background-color: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 2rem;
-  }
-  header nav, header .headerBtn {
-    display: none;
-  }
-  header nav {
-    width: 100%;
-  }
-  header .headerBtn {
-    width: 100%;
-    font-size: 15px;
-    letter-spacing: 2.5px;
+    padding: 1.75rem 2.5rem;
+    display: block;
   }
   header .headerIcons {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 100%;
-  }
-  header .openMenu {
-    display: block;
-  }
-  header .mainNav {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 100%;
-    padding: 2rem;
-    border-bottom: 1px solid #000;
-    -webkit-transition: top 1s ease;
-    transition: top 1s ease;
   }
-  header .mainNav .mainNavLink {
+  header .headerIcons .openMenu {
+    display: block;
+  }
+  header .test, header .nav {
+    width: 100%;
+  }
+  header .test {
+    max-height: 0px;
+    overflow: hidden;
+    visibility: hidden;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: absolute;
+    top: 72px;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+    padding: 0 2.5rem;
+  }
+  header .test.open {
+    visibility: visible;
+  }
+  header .mainNav, header .test {
+    display: block;
+    margin: 0;
+  }
+  header .mainNav {
+    border-bottom: 1px solid #dfdfdf;
+  }
+  header .mainNavLink {
+    padding: 1.5rem 1rem;
     font-size: 15px;
+    font-weight: 700;
     letter-spacing: 2.5px;
+    text-align: center;
+  }
+  header .headerBtn {
+    width: 100%;
+    margin: 1.5rem 0;
   }
 }
 
@@ -1702,6 +1706,7 @@ footer .rights p {
 }
 
 .comparison {
+  margin-top: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1712,14 +1717,42 @@ footer .rights p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 2rem;
+}
+
+.comparison h2 {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 4.2px;
+  text-transform: uppercase;
 }
 
 .comparison table {
+  margin-bottom: 10rem;
+  border-collapse: collapse;
   width: 60%;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
-.comparison table tr > th {
-  border-bottom: 2px #000 solid;
+.comparison table th {
+  border-bottom: 1px #000 solid;
+  padding: 1.5rem;
+}
+
+.comparison table td {
+  border-bottom: 1px #dfdfdf solid;
+  padding: 1.5rem;
+}
+
+.comparison table .featureHead {
+  text-align: left;
+}
+
+.comparison table .mark {
+  text-align: center;
 }
 
 @media (max-width: 1000px) {
@@ -1839,6 +1872,30 @@ footer .rights p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .comparison h2 {
+    font-size: 32px;
+    letter-spacing: 3px;
+  }
+  .comparison table {
+    width: 60%;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  .comparison table th {
+    border-bottom: 1px #000 solid;
+    padding: 0.75rem;
+  }
+  .comparison table td {
+    border-bottom: 1px #dfdfdf solid;
+    padding: 0.75rem;
+  }
+  .comparison table .featureHead {
+    text-align: left;
+  }
+  .comparison table .mark {
+    text-align: center;
   }
 }
 /*# sourceMappingURL=main.css.map */

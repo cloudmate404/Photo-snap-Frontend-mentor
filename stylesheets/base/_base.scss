@@ -72,3 +72,7 @@ a{
     display: flex;
     justify-content: space-between;
   }
+
+  .openMenu, .closeMenu{
+    cursor: pointer;
+  }

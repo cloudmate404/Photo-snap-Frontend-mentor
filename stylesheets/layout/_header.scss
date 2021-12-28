@@ -1,28 +1,46 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
-
+/////////////////////////////////////////////////////
 header{
     margin: 0 auto;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
     padding: 1.5rem 10rem;
-    
 
-        
-        nav{
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
+    .headerIcons{
+        align-self: center;
+
+
+        .openMenu, .closeMenu{
+            display: none;
+            padding: 1rem;
         }
-    
-    
-       
-    .headerHr{
-        display: none;
     }
+    
+        .test{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            // .mainNav{
+            //     grid-column: 2/3;
+            //     margin: 0 auto;
+            //     display: flex;
+            //     align-items: center;
+            // }
+            
+        }
+        
+    }
+    
+    //////////////////////////////////////
+       
+  
     .mainNav{
         display: flex;
         gap: 2.5rem;
@@ -44,11 +62,13 @@ header{
             }
         }
 
-    }
+    
 
-    .openMenu, .closeMenu{
-        display: none;
-    }
+   
+
+
+    ////TESTTTTTTTTTTTTT
+    
 }
 
 
@@ -64,52 +84,64 @@ header{
 
 
 
-@media (max-width:$menu ){
+@media (max-width:850px ){
 
    header{
-       nav, .headerBtn{
-        display: none;
-       }
-        
-    //   position: absolute;  
-        background-color: $pureWhite;
-       nav{
-        width: 100%;
-       }
-       .headerBtn{
-           width: 100%;
-           font-size: $p;
-            letter-spacing: 2.5px;
-       }
-       .headerIcons{
-           display: flex;
-           align-items: center;
-           justify-content: space-between;
-           width: 100%;
-       }
-       
-       .openMenu{
-           display: block;
-       }
-       .mainNav{
-           flex-direction: column;
-           align-items: center;
-           width: 100%;
-           padding: 2rem;
-           border-bottom: 1px solid $pureBlack;
-           transition: top 1s ease;
-           .mainNavLink{
-            font-size: $p;
-            letter-spacing: 2.5px;
-
-           }
-       }
-
-       display: flex;
-       flex-direction: column;
-       gap: 2rem;
-   }
+    padding: 1.75rem 2.5rem ;
+    display: block;
     
+    
+    .headerIcons{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .openMenu{
+            display: block;
+        }
+    }
+    .test, .nav{
+        width: 100%;
+    }
+    .test{
+        max-height: 0px;
+        overflow: hidden;
+        visibility: hidden;
+        transition: all 0.5s ease;
+        position: absolute;
+        top: 72px;
+        right: 0;
+        left:0;
+        background-color: $pureWhite;
+        padding: 0 2.5rem;
+    }
+    .test.open{
+        visibility: visible;
+    }
+    .mainNav,.test{
+        display: block;
+        margin: 0;
+
+    }
+    .mainNav{
+        border-bottom: 1px solid $lightGrey;
+
+    }
+    .mainNavLink{
+        padding: 1.5rem 1rem;
+        font-size: $p;
+        font-weight: 700;
+        letter-spacing: 2.5px;
+        text-align: center;
+    }
+    .headerBtn{
+        width: 100%;
+        margin: 1.5rem 0;
+    }
+
+    
+
+   }
+   
 }
 
 
