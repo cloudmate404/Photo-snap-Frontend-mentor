@@ -1,59 +1,12 @@
-// const openMenu = document.querySelector('.openMenu')
-// const closeMenu = document.querySelector('.closeMenu')
-// const nav = document.querySelector('.nav')
-// const test = document.querySelector('.test')
-// // const headerBtn = document.querySelector('.headerBtn')
-// const header = document.querySelector('.header')
-// const headerIcons = document.querySelector('.headerIcons')
-
-
-// openMenu.addEventListener('click', ()=>{
-//     openMenu.style.display ='none'
-//     closeMenu.style.display = 'block'
-    
-
-//     test.style.position = 'fixed'
-//     test.style.top = '64px'
-
-//     test.style.flexDirection ='column'
-//     test.style.display = 'block'
-
-    
-
-//     // header.style.transition = 'top 1s ease'
-//     // nav.style.transition = 'all ease 2s'
-//     // headerBtn.style.transition = 'top 1s ease'
-
-// })
-
-// closeMenu.addEventListener('click', ()=>{
-//     closeMenu.style.display ='none'
-//     openMenu.style.display = 'block'
-//     // header.style.position = 'static'
-//     // nav.style.display ='none'
-//     // headerBtn.style.display ='none'
-//     test.style.display = 'none'
-//     test.style.transition = 'all 2s'
-
-// })
-
-// window.addEventListener('click', function(e){
-//     if (!test.contains(e.target)&& (!headerIcons.contains(e.target))){
-//      test.style.display="none"
-//      closeMenu.style.display ='none'
-//     openMenu.style.display = 'block'
-
-//   } 
-// })
-
-
-
  const openMenu = document.querySelector('.openMenu');
  const closeMenu = document.querySelector('.closeMenu');
  const test = document.querySelector('.test')
+ const checkbox = document.getElementById('checkbox');
+ const plan1 = document.querySelector('.plan1');
+ const plan2 = document.querySelector('.plan2');
+ const plan3 = document.querySelector('.plan3');
 
-
-
+// Mobile NAvigation
  openMenu.addEventListener('click', navOpen);
  closeMenu.addEventListener('click', navClose);
  const headerIcons = document.querySelector('.headerIcons')
@@ -85,3 +38,35 @@
   } 
 })
 
+// PRICE CHANGES    
+checkbox.addEventListener('click', changePrice);
+
+function changePrice(){
+    if(checkbox.checked){
+        plan1.innerHTML =`
+        <h1>$190.00</h1>
+        <p>per year</p>
+        `
+        plan2.innerHTML =`
+        <h1>$390.00</h1>
+        <p>per year</p>
+        `
+        plan3.innerHTML =`
+        <h1>$390.00</h1>
+        <p>per year</p>
+        `
+    }else{
+        plan1.innerHTML =`
+        <h1>$19.00</h1>
+        <p>per month</p>
+        `
+        plan2.innerHTML =`
+        <h1>$39.00</h1>
+        <p>per month</p>
+        `
+        plan3.innerHTML =`
+        <h1>$99.00</h1>
+        <p>per month</p>
+        `
+    }
+}
