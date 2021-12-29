@@ -1613,7 +1613,7 @@ footer .rights p {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #dfdfdf;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -1625,23 +1625,24 @@ footer .rights p {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: #000;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 .pricing .priceHead input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #000;
 }
 
 .pricing .priceHead input:focus + .slider {
-  -webkit-box-shadow: 0 0 1px #2196F3;
-          box-shadow: 0 0 1px #2196F3;
+  -webkit-box-shadow: 0 0 1px #000;
+          box-shadow: 0 0 1px #000;
 }
 
 .pricing .priceHead input:checked + .slider:before {
   -webkit-transform: translateX(26px);
-  transform: translateX(26px);
+          transform: translateX(26px);
+  background-color: #fff;
 }
 
 .pricing .priceHead .slider.round {
